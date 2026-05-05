@@ -29,17 +29,14 @@ export default function Home() {
           <span style={{ fontWeight: 700, fontSize: '16px', color: '#1a1a2e' }}>StudentHub</span>
         </div>
         <div style={{ display: 'flex', gap: '8px' }}>
-          {['首页', '课程', '校历', 'GPA计算器'].map(item => (
-            <button key={item} style={{
-              padding: '6px 14px',
-              borderRadius: '8px',
-              border: 'none',
-              background: 'transparent',
-              color: '#6b7280',
-              cursor: 'pointer',
-              fontSize: '14px',
-            }}>{item}</button>
-          ))}
+          {([['首页', '/'], ['课程', '/courses'], ['校历', '/calendar'], ['GPA计算器', '/gpa']] as [string, string][]).map(([label, href]) => (
+  <a key={label} href={href} style={{
+    padding: '6px 14px', borderRadius: '8px',
+    background: 'transparent',
+    color: '#6b7280',
+    fontSize: '14px', textDecoration: 'none',
+  }}>{label}</a>
+))}
         </div>
         <div style={{
           background: '#51247A',
@@ -101,16 +98,18 @@ export default function Home() {
   textDecoration: 'none',
   display: 'inline-block',
 }}>开始探索课程 →</a>
-          <button style={{
-            background: 'white',
-            color: '#51247A',
-            padding: '14px 28px',
-            borderRadius: '10px',
-            border: '2px solid #51247A',
-            fontSize: '16px',
-            fontWeight: 600,
-            cursor: 'pointer',
-          }}>查看校历</button>
+          <a href="/calendar" style={{
+  background: 'white',
+  color: '#51247A',
+  padding: '14px 28px',
+  borderRadius: '10px',
+  border: '2px solid #51247A',
+  fontSize: '16px',
+  fontWeight: 600,
+  cursor: 'pointer',
+  textDecoration: 'none',
+  display: 'inline-block',
+}}>查看校历</a>
         </div>
       </div>
 
