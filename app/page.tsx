@@ -86,18 +86,7 @@ export default function Home() {
           选课前全部告诉你
         </p>
         <div style={{ display: 'flex', gap: '12px', justifyContent: 'center' }}>
-          <a href="/courses" style={{
-  background: '#51247A',
-  color: 'white',
-  padding: '14px 28px',
-  borderRadius: '10px',
-  border: 'none',
-  fontSize: '16px',
-  fontWeight: 700,
-  cursor: 'pointer',
-  textDecoration: 'none',
-  display: 'inline-block',
-}}>开始探索课程 →</a>
+          <a href="/courses" style={{ background: '#51247A', color: 'white', padding: '14px 28px', borderRadius: '10px', border: 'none', fontSize: '16px', fontWeight: 700, cursor: 'pointer', textDecoration: 'none', display: 'inline-block' }}>开始探索课程 →</a>
           <a href="/calendar" style={{
   background: 'white',
   color: '#51247A',
